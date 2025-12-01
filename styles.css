@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* <!-- Final Project - Portfolio
 Kyra O'Brien W0303706
 Difficulty: Advanced  --> */
@@ -149,3 +150,703 @@ body {
     flex-direction: column;
   }
 }
+=======
+/* <!-- Final Project - Portfolio
+Kyra O'Brien W0303706
+Difficulty: Advanced  --> */
+
+/* ===== Font ===== */
+* {
+    font-family: Helvetica, sans-serif;
+}
+
+input, textarea, select, button {
+    font-family: inherit;
+}
+
+/* ===== Smooth Scroll ===== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== Body ===== */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #deeaee; soft teal background
+}
+
+main {
+    flex: 1;
+}
+
+/* ===== Hero Section with animated gradient ===== */
+#hero {
+    text-align: center;
+    padding: 20px 10px;
+    min-height: 150px;
+    background: linear-gradient(-45deg, #deeaee, #b1cbbb, #eea29a, #c94c4c);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: white;
+    text-shadow: .1px .1px .2px slategray, 0 0 25px #b1cbbb, 0 0 5px #eea29a;
+}
+
+#hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    animation: shadowMove 5s ease-in-out infinite alternate;  
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+@keyframes gradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* ===== Desktop Menu ===== */
+#desktopMenu {
+    display: flex;
+    gap: 20px;
+    padding: 10px 20px;
+    background-color: #b1cbbb; /* darker teal */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+#desktopMenu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== Mobile Hamburger ===== */
+.navbar {
+    display: none;
+    flex-direction: column;
+    padding: 10px 20px;
+    background-color: #9bb7b7;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+}
+
+.hamburger span {
+    height: 3px;
+    background: white;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+#mobileMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+}
+
+#mobileMenu.show {
+    max-height: 500px;
+}
+
+#mobileMenu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Experience section */
+/* Photos */
+#experience img {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+#experience img:hover {
+    transform: scale(1.05);
+}
+
+#experience .social-btn {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Experience section 3-column layout */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+/* Columns styling */
+.experience-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+.experience-column img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.experience-column img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 768px) {
+    .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* reorder columns for mobile/tablet */
+    .skills {
+        order: 1;
+    }
+    .certificates {
+        order: 2;
+    }
+    .photography {
+        order: 3;
+    }
+}
+
+/* Columns styling */
+.experience-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+.experience-column img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.experience-column img:hover {
+    transform: scale(1.05);
+}
+
+.award-item {
+    margin-bottom: 20px; /* space between awards */
+    text-align: center;
+}
+
+.award-item img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: block;
+    margin-bottom: 8px; /* space between image and text */
+}
+
+.award-text {
+    font-size: 0.9rem;
+    color: #222;
+    line-height: 1.4;
+    text-align: center;
+    padding: 0 5px; /* optional: small padding for readability */
+}
+
+/* Info text that triggers tooltip */
+.info-hover {
+    cursor: pointer;
+    color: #c94c4c;
+    /* font-weight: bold; */
+    margin-top: 8px;
+    display: inline-block;
+    position: relative;
+}
+
+/* Tooltip block that overlays the image below */
+.tooltip-block {
+    position: absolute;
+    top: 100%; /* below info text */
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px); /* center horizontally, lift slightly */
+    width: 90%; /* covers most of the image */
+    background-color: rgba(0,0,0,0.85);
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    z-index: 10;
+}
+
+/* Show tooltip on hover of info text */
+.info-hover:hover .tooltip-block {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Responsive tweak for smaller screens */
+@media (max-width: 480px) {
+    .tooltip-block {
+        width: 95%;
+        font-size: 0.8rem;
+    }
+}
+
+/* Card style for Program + Skills */
+.card {
+    background-color: #b1cbbb;  /* soft teal card */
+    color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #c94c4c; /* accent pink/red heading */
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 768px) {
+    .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* reorder columns for mobile/tablet */
+    .skills {
+        order: 1;
+    }
+    .certificates {
+        order: 2;
+    }
+    .photography {
+        order: 3;
+    }
+}
+
+/* Highlight links in cards */
+.link-highlight {
+    color: #c94c4c;  /* same pink/red accent */
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.link-highlight:hover {
+    color: #eea29a;  /* lighter pink on hover */
+    transform: translateY(-1px);
+}
+
+/* ===== Tab Sections ===== */
+.tab-section {
+    display: none;           /* hide all sections by default */
+    padding: 40px 20px;
+}
+
+/* Show section when its ID matches the URL hash */
+.tab-section:target {
+    display: block;
+}
+
+/* Show hero section only when no tab is selected */
+body:not(:has(:target)) #hero {
+    display: block;
+}
+
+/* ===== Contact buttons styling ===== */
+
+#contact {
+    padding: 20px 10px;  /* minimal top/bottom padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* center buttons horizontally */
+    gap: 10px;               /* spacing between buttons & popup */
+}
+
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;          /* equal spacing between all buttons */
+    margin: 0;
+}
+
+.contact-buttons a,
+.contact-buttons button {
+    display: flex;
+    align-items: center;
+    gap: 5px;           /* space between icon and text */
+    padding: 10px 20px; /* same for all buttons */
+    background-color: #b1cbbb;
+    color: #222;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.contact-buttons a:hover,
+.contact-buttons button:hover {
+    background-color: #c94c4c;
+    color: white;
+    transform: translateY(-2px);
+}
+/* Caption under image */
+.portrait-caption {
+    margin-top: 12px;
+    font-size: 17px;
+    color: black;
+    position: center; 
+}
+
+.map-container {
+    width: 100%;
+    max-width: 900px; /* optional: limit width */
+    margin: 0 auto;   /* center horizontally */
+    border-radius: 20px; /* optional: rounded edges */
+    overflow: hidden; /* ensures glow doesn't get clipped */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* subtle base shadow */
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 350px; /* slightly less tall, adjust as needed */
+    border: 0;
+    display: block;
+}
+
+/* Hover effect */
+.map-container:hover {
+    transform: scale(1.02); /* subtle zoom */
+    box-shadow: 0 0 25px rgba(255, 105, 180, 0.6), /* pink glow */
+                0 0 35px rgba(0, 255, 150, 0.4);    /* green glow */
+}
+
+.ns-links {
+    text-align: center;
+    margin-top: 30px; /* increase this number to add more space */
+    margin-bottom: 20px; /* optional: space below links */
+}
+
+/* Style gallery like footer links */
+.ns-links {
+    text-align: center;
+    margin-top: 30px; /* spacing above links */
+    margin-bottom: 20px; /* spacing below links */
+}
+
+.ns-links a {
+    color: #c94c4c;  /* same pink/red accent as footer */
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+    position: relative; /* needed for tooltip */
+    transition: color 0.3s ease;
+}
+
+.ns-links a:hover {
+    color: #eea29a; /* lighter pink on hover */
+}
+
+/* Tooltip for NS links */
+.ns-links a.tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #eee;
+    padding: 6px 12px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 0.75rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.ns-links a.tooltip::before {
+    content: "";
+    position: absolute;
+    bottom: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ns-links a.tooltip:hover::after,
+.ns-links a.tooltip:hover::before {
+    opacity: 1;
+}
+
+.ns-links a:visited {
+    color: #6bafaf;  /* same as footer visited color */
+}
+
+/* Make links stack on mobile */
+@media (max-width: 480px) {
+    .ns-links a {
+        display: block;
+        margin: 5px 0;
+    }
+    .ns-links a.tooltip::after {
+        white-space: normal;
+        max-width: 200px;
+    }
+}
+
+/* Portrait container */
+.portrait-container {
+    text-align: center;
+    margin: 40px 0; /* spacing around the portrait section */
+}
+
+/* Horizontal oval portrait with neon glow */
+.portrait-container img {
+    width: 100%;
+    max-width: 300px;       /* responsive size */
+    height: auto;
+    border-radius: 50% / 50%; /* full horizontal oval */
+    box-shadow: 
+        0 0 15px #8B008B,  /* dark pink glow */
+        0 0 30px #006400;  /* dark green glow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Center everything */
+.portrait-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* Hide the checkbox */
+#toggle-portrait {
+    display: none;
+}
+
+/* Wrapper containing both images */
+.portrait-wrapper {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Base portrait styling */
+.portrait {
+    width: min(80vw, 350px);  /* responsive: up to 350px max */
+    aspect-ratio: 4 / 3;      /* horizontal oval */
+    object-fit: cover;
+    border-radius: 50% / 50%; /* horizontal oval shape */
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 
+        opacity 0.4s ease,
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+/* Glow on hover (animated neon) */
+.portrait-wrapper:hover .portrait {
+    transform: scale(1.03);
+    animation: neonPulse 2s infinite alternate ease-in-out;
+}
+
+#portrait {
+    width: 100%;
+    max-width: 300px;       /* responsive */
+    aspect-ratio: 2/1;      /* horizontal oval */
+    border-radius: 50% / 50%; /* keeps horizontal oval */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow:
+        0 0 10px rgba(139, 0, 139, 0.6),   /* dark pink glow */
+        0 0 20px rgba(139, 0, 139, 0.5),
+        0 0 30px rgba(139, 0, 139, 0.4);
+}
+
+/* Neon animation keyframes */
+@keyframes neonPulse {
+    0% {
+        filter: drop-shadow(0 0 6px rgba(139, 0, 139, 0.4))   /* dark pink */
+                drop-shadow(0 0 12px rgba(0, 100, 0, 0.5));  /* dark green */
+    }
+    100% {
+        filter: drop-shadow(0 0 12px rgba(255, 20, 147, 0.8)) /* brighter pink */
+                drop-shadow(0 0 24px rgba(50, 205, 50, 0.9)); /* brighter green */
+    }
+}
+
+#portrait:hover {
+    animation: neonPulse 1.5s infinite alternate;
+    transform: scale(1.05);
+}
+
+/* Default visibility */
+.normal-img {
+    opacity: 1;
+    position: relative;
+}
+
+.cartoon-img {
+    opacity: 0;
+}
+
+/* Toggle effect — when checked, swap images */
+#toggle-portrait:checked + .portrait-wrapper .normal-img {
+    opacity: 0;
+}
+
+#toggle-portrait:checked + .portrait-wrapper .cartoon-img {
+    opacity: 1;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: transparent;
+    color: #222;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.footer-links {
+    display: inline-flex;
+    gap: 10px;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.references-label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.tooltip {
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    color: #c94c4c;
+    transition: color 0.3s ease;
+}
+
+.footer-links span.tooltip {
+    color: #555;
+    cursor: default;
+}
+
+.tooltip:hover {
+    color: #eea29a;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #eee;
+    padding: 6px 12px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 0.75rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.tooltip::before {
+    content: "";
+    position: absolute;
+    bottom: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tooltip:hover::after,
+.tooltip:hover::before {
+    opacity: 1;
+}
+
+/* Visited state for reference links */
+.footer-links a.visited-link {
+    color: #6bafaf;
+}
+
+/* Style for the dynamic copyright */
+footer .copyright {
+    font-size: 0.9rem;   /* matches your other footer text */
+    color: #333;         /* same as other footer text */
+    margin-top: 10px;    /* spacing from above links */
+    display: block;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #desktopMenu {
+        display: none;
+    }
+    .navbar {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+    .tooltip::after {
+        white-space: normal;
+        max-width: 200px;
+    }
+}
+>>>>>>> f623b67 (Initial commit of my portfolio site)
