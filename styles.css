@@ -3,8 +3,23 @@ Kyra O'Brien W0303706
 Difficulty: Advanced  --> */
 
 /* ===== Font ===== */
-* {
+/* * {
     font-family: Helvetica, sans-serif;
+} */
+/* .inter-globalfont> {
+  font-family: "Inter", sans-serif; */
+  /* font-optical-sizing: auto; */
+  /* font-weight: <weight>; */
+  /* font-style: normal; */
+/* } */
+
+.open-sans-globalfont> {
+  font-family: "Open Sans", sans-serif;
+  /* font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100; */
 }
 
 input, textarea, select, button {
@@ -635,6 +650,7 @@ footer {
     bottom: 125%;
     left: 50%;
     transform: translateX(-50%);
+    inset-inline-start: clamp(10px, 50%, calc(100vw - 10px));
     background-color: #333;
     color: #eee;
     padding: 6px 12px;
@@ -674,7 +690,7 @@ footer {
 
 /* Style for the dynamic copyright */
 footer .copyright {
-    font-size: 0.9rem;   /* matches your other footer text */
+    font-size: 0.9rem;   /* matches other footer text */
     color: #333;         /* same as other footer text */
     margin-top: 10px;    /* spacing from above links */
     display: block;
