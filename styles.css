@@ -773,23 +773,22 @@ footer .copyright {
     }
 }
 
-/* Tablet view: stack columns lightly */
 @media (max-width: 992px) and (min-width: 769px) {
     .experience-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns instead of 3 */
-        gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr; /* single column stack */
+        gap: 10px;                  /* adjust spacing between items */
     }
 
-    /* Optional: adjust column ordering */
-    .skills, .certificates, .photography {
-        order: unset; /* keep logical order on tablets */
+    .skills {
+        grid-row: 1;
     }
 
-    /* Reduce hero font sizes slightly for tablet */
-    #hero h1 {
-        font-size: 2.2em;
+    .certificates {
+        grid-row: 2; /* directly under skills */
     }
-    #hero p {
-        font-size: 1.1em;
+
+    .photography {
+        grid-row: 3; /* below awards on tablets */
     }
 }
