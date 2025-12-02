@@ -3,23 +3,8 @@ Kyra O'Brien W0303706
 Difficulty: Advanced  --> */
 
 /* ===== Font ===== */
-/* * {
-    font-family: Helvetica, sans-serif;
-} */
-/* .inter-globalfont> {
-  font-family: "Inter", sans-serif; */
-  /* font-optical-sizing: auto; */
-  /* font-weight: <weight>; */
-  /* font-style: normal; */
-/* } */
-
 .open-sans-globalfont> {
   font-family: "Open Sans", sans-serif;
-  /* font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100; */
 }
 
 input, textarea, select, button {
@@ -389,7 +374,7 @@ main {
 }
 
 /* Show hero section only when no tab is selected */
-body:not(:has(:target)) #hero {
+body:not(:has(:target)) #experience {
     display: block;
 }
 
