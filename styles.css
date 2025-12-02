@@ -624,6 +624,11 @@ footer {
     color: #eea29a;
 }
 
+.tooltip {
+    position: relative;
+    overflow: visible; /* default, but ensures the tooltip isn't clipped */
+}
+
 .tooltip::after {
     content: attr(data-tooltip);
     position: absolute;
@@ -634,7 +639,9 @@ footer {
     color: #eee;
     padding: 6px 12px;
     border-radius: 5px;
-    white-space: nowrap;
+    white-space: normal; 
+    max-width: 320px;
+    width: max-content;
     font-size: 0.75rem;
     opacity: 0;
     pointer-events: none;
@@ -696,4 +703,4 @@ footer .copyright {
         max-width: 200px;
     }
 }
->>>>>>> f623b67 (Initial commit of my portfolio site)
+
