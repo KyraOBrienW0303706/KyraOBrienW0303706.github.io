@@ -852,9 +852,10 @@ footer .copyright {
 
 @media (max-width: 480px) {
     .footer-links {
-        flex-direction: column;
-        gap: 5px;
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
     }
     .tooltip::after {
         white-space: normal;
