@@ -125,6 +125,49 @@ main {
 }
 
 /* Experience section */
+
+/* Container for skills */
+.skills-icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+/* Each icon + label */
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 80px; /* optional: keeps items aligned */
+}
+
+/* Icon sizing & quality */
+.skills-icon {
+    width: 64px;           /* all icons same width */
+    height: 64px;          /* all icons same height */
+    object-fit: contain;    /* preserves aspect ratio */
+    image-rendering: auto;  /* ensures smooth scaling for PNGs */
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.skill-item:hover .skills-icon {
+    transform: scale(1.2);
+}
+
+/* Label under icon */
+.skill-item span {
+    display: block;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #222;
+}
+
 /* Photos */
 #experience img {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -411,6 +454,13 @@ body:not(:has(:target)) #experience {
     font-size: 1rem;
     cursor: pointer;
     transition: transform 0.2s, background-color 0.3s;
+}
+
+.contact-buttons .button-icon {
+    width: 32px;       /* uniform width for all SVGs */
+    height: 32px;      /* uniform height */
+    object-fit: contain; /* preserve aspect ratio */
+    display: inline-block;
 }
 
 .contact-buttons a:hover,
