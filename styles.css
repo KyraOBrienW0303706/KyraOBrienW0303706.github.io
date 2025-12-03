@@ -2,7 +2,7 @@
 Kyra O'Brien W0303706
 Difficulty: Advanced  --> */
 
-/* ===== Font ===== */
+/* ------------GLOBAL FONT------------- */
 .open-sans-globalfont> {
   font-family: "Open Sans", sans-serif;
 }
@@ -11,25 +11,29 @@ input, textarea, select, button {
     font-family: inherit;
 }
 
-/* ===== Smooth Scroll ===== */
+/* -SMOOTH SCROLL-- */
 html {
     scroll-behavior: smooth;
 }
 
-/* ===== Body ===== */
+/* --BODY-- */
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    background-color: #deeaee; /*soft teal background*/
+    background-color: #deeaee; 
+}
+
+body {
+    overflow-x: hidden;
 }
 
 main {
     flex: 1;
 }
 
-/* ===== Hero Section with animated gradient ===== */
+/* -------------ANIMATED: HERO SECTION-------------- */
 #hero {
     text-align: center;
     padding: 20px 10px;
@@ -58,12 +62,12 @@ main {
     100% {background-position: 0% 50%;}
 }
 
-/* ===== Desktop Menu ===== */
+/* -----------MENU NAVIGATION-------------- */
 #desktopMenu {
     display: flex;
     gap: 20px;
     padding: 10px 20px;
-    background-color: #b1cbbb; /* darker teal */
+    background-color: #b1cbbb; 
     position: sticky;
     top: 0;
     z-index: 10;
@@ -76,7 +80,7 @@ main {
     font-weight: bold;
 }
 
-/* ===== Mobile Hamburger ===== */
+/* --MOBILE HAMBURGER MENU-- */
 .navbar {
     display: none;
     flex-direction: column;
@@ -111,7 +115,7 @@ main {
 }
 
 #mobileMenu a:hover {
-    color: #eea29a; /* same pink accent */
+    color: #eea29a; 
 }
 
 #mobileMenu.show {
@@ -126,9 +130,9 @@ main {
     padding: 5px 10px;
 }
 
-/* Experience section */
+/* ----------EXPERIENCE TAB--------- */
 
-/* Container for skills */
+/* --SKILLS CONTAINER-- */
 .skills-icons-container {
     display: flex;
     flex-wrap: wrap;
@@ -137,32 +141,32 @@ main {
     margin-top: 15px;
 }
 
-/* Each icon + label */
+/* --ICON + LABEL-- */
 .skill-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 1.3rem;
     text-align: center;
-    width: 80px; /* optional: keeps items aligned */
+    width: 80px; 
 }
 
-/* Icon sizing & quality */
+/* --ICON SIZING-- */
 .skills-icon {
-    width: 64px;           /* all icons same width */
-    height: 64px;          /* all icons same height */
-    object-fit: contain;    /* preserves aspect ratio */
-    image-rendering: auto;  /* ensures smooth scaling for PNGs */
+    width: 64px;           
+    height: 64px;          
+    object-fit: contain;    
+    image-rendering: auto;  
     margin-bottom: 5px;
     transition: transform 0.3s ease;
 }
 
-/* Hover effect */
+/* ANIMATION: HOVER EFFECT */
 .skill-item:hover .skills-icon {
     transform: scale(1.2);
 }
 
-/* Label under icon */
+/* --LABEL UNER ICON-- */
 .skill-item span {
     display: block;
     text-align: center;
@@ -171,7 +175,7 @@ main {
     color: #222;
 }
 
-/* Photos */
+/* --PHOTOS-- */
 #experience img {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.2s;
@@ -187,13 +191,13 @@ main {
 }
 
 .intro-line {
-    font-size: 1.5rem;  /* adjust this number to make it bigger or smaller */
-    line-height: 1.4;   /* optional: improves readability */
-    color: #222;        /* matches your text color */
+    font-size: 1.5rem;  
+    line-height: 1.4;   
+    color: #222;        
     text-align: center;
 }
 
-/* Experience section 3-column layout */
+/* --3 COLUMN LAYOUT-- */
 .experience-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -201,7 +205,7 @@ main {
     align-items: start;
 }
 
-/* Columns styling */
+/* --COLUMN STYLING-- */
 .experience-column {
     display: flex;
     flex-direction: column;
@@ -214,72 +218,30 @@ main {
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.2s;
-}
-
-.experience-column img:hover {
-    transform: scale(1.05);
 }
 
 .experience-column p:first-child {
-    font-size: 1.6rem;  /* adjust size */
-    font-weight: bold;  /* makes it stand out */
-    margin-bottom: 10px; /* spacing below heading */
+    font-size: 1.6rem; 
+    font-weight: bold;  
+    margin-bottom: 10px; 
     color: #222;
 }
 
-/* Responsive: stack on smaller screens */
-@media (max-width: 768px) {
-    .experience-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    /* reorder columns for mobile/tablet */
-    .skills {
-        order: 1;
-    }
-    .certificates {
-        order: 2;
-    }
-    .photography {
-        order: 3;
-    }
-}
-
-/* Columns styling */
-.experience-column {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-}
-
-.experience-column img {
-    width: 100%;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-}
-
-.experience-column img:hover {
-    transform: scale(1.05);
-}
-
-/* ===== Make gallery images obviously clickable ===== */
+/* --GALLERY IMAGES CLICKABLE EFFECTS-- */
 .photography img,
 .certificates img {
-    cursor: pointer;           /* cursor changes to hand */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth hover effects */
+    cursor: pointer;           
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .photography img:hover,
 .certificates img:hover {
-    transform: scale(1.08);    /* slightly larger on hover */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* subtle shadow glow */
+    transform: scale(1.08);    
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); 
 }
 
 .award-item {
-    margin-bottom: 20px; /* space between awards */
+    margin-bottom: 20px; 
     text-align: center;
 }
 
@@ -288,19 +250,18 @@ main {
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     display: block;
-    margin-bottom: 8px; /* space between image and text */
+    margin-bottom: 8px; 
 }
 
 .award-text {
-    /* font-size: 0.9rem; */
     font-size: 1.2rem;
     color: #222;
     line-height: 1.4;
     text-align: center;
-    padding: 0 5px; /* optional: small padding for readability */
+    padding: 0 5px; 
 }
 
-/* Hidden by default */
+/* --HIDDEN BY DEFAULT-- */
 .enlarge-img {
     display: none;
     position: fixed;
@@ -328,28 +289,27 @@ main {
     text-decoration: none;
 }
 
-/* Show when targeted */
+/* --SHOW WHEN TARGETED-- */
 .enlarge-img:target {
     display: flex;
 }
 
-/* Info text that triggers tooltip */
+/* --INFO TEXT THAT TRIGGERS THE TOOLTIP-- */
 .info-hover {
     cursor: pointer;
     color: #c94c4c;
-    /* font-weight: bold; */
     margin-top: 8px;
     display: inline-block;
     position: relative;
 }
 
-/* Tooltip block that overlays the image below */
+/* --TOOLTIP BLOCK THAT OVERLAYS THE IMAGE BELOW-- */
 .tooltip-block {
     position: absolute;
-    top: 100%; /* below info text */
+    top: 100%; 
     left: 50%;
-    transform: translateX(-50%) translateY(-10px); /* center horizontally, lift slightly */
-    width: 90%; /* covers most of the image */
+    transform: translateX(-50%) translateY(-10px);
+    width: 90%; 
     background-color: rgba(0,0,0,0.85);
     color: #fff;
     padding: 12px;
@@ -361,23 +321,15 @@ main {
     z-index: 10;
 }
 
-/* Show tooltip on hover of info text */
+/* --SHOW TOOLTIP ON HOVER OF INFO TEXT-- */
 .info-hover:hover .tooltip-block {
     opacity: 1;
     pointer-events: auto;
 }
 
-/* Responsive tweak for smaller screens */
-@media (max-width: 480px) {
-    .tooltip-block {
-        width: 95%;
-        font-size: 0.8rem;
-    }
-}
-
 /* Card style for Program + Skills */
 .card {
-    background-color: #b1cbbb;  /* soft teal card */
+    background-color: #b1cbbb;  
     color: #222;
     padding: 20px;
     border-radius: 10px;
@@ -388,86 +340,67 @@ main {
     margin-top: 0;
     margin-bottom: 15px;
     font-size: 2.6em;
-    color: #c94c4c; /* accent pink/red heading */
+    color: #c94c4c; 
 }
 
-/* Responsive: stack on smaller screens */
-@media (max-width: 768px) {
-    .experience-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    /* reorder columns for mobile/tablet */
-    .skills {
-        order: 1;
-    }
-    .certificates {
-        order: 2;
-    }
-    .photography {
-        order: 3;
-    }
-}
-
-/* Highlight links in cards */
+/* --HIGHLIGHT LINKS IN SKILLS SECTION-- */
 .link-highlight {
-    color: #c94c4c;  /* same pink/red accent */
+    color: #c94c4c;
     text-decoration: underline;
     font-weight: bold;
     transition: color 0.3s, transform 0.2s;
 }
 
 .link-highlight:hover {
-    color: #eea29a;  /* lighter pink on hover */
+    color: #eea29a;  
     transform: translateY(-1px);
 }
 
-/* ===== Tab Sections ===== */
+/* --TAB SECTIONS--*/
 .tab-section {
-    display: none;           /* hide all sections by default */
+    display: none;           
     padding: 40px 20px;
 }
 
-/* Show section when its ID matches the URL hash */
+/* --SHOW SECTION WHEN ITS ID MATCHES THE URL HASH---*/
 .tab-section:target {
     display: block;
 }
 
-/* Show hero section only when no tab is selected */
+/* --SHOW HERO SECTION WHEN NO TAB SELECTED-- */
 body:not(:has(:target)) #experience {
     display: block;
 }
 
-/* Contact Section Text Sizes */
+/* --CONTACT SECTION TEXT STYLES-- */
 #contact h2 {
-    font-size: 2rem;       /* change this */
+    font-size: 2rem;       
 }
 
 #contact p {
     font-size: 1.2rem; 
-    text-align: center;    /* this controls the fair traveler paragraph */
+    text-align: center;   
 }
 
 #contact h2 {
-    margin-bottom: 0.1rem;   /* reduce spacing between header and paragraph */
+    margin-bottom: 0.1rem;  
 }
 
-/* ===== Contact buttons styling ===== */
+/* --CONTACT BUTTOn STYLING-- */
 
 #contact {
-    padding: 20px 10px;  /* minimal top/bottom padding */
+    padding: 20px 10px;  
     display: flex;
     flex-direction: column;
-    align-items: center;     /* center buttons horizontally */
-    gap: 10px;               /* spacing between buttons & popup */
+    align-items: center;     
+    gap: 10px;               
 }
 
 .contact-buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;          /* equal spacing between all buttons */
+    gap: 15px;          
     margin: 0;
 }
 
@@ -475,8 +408,8 @@ body:not(:has(:target)) #experience {
 .contact-buttons button {
     display: flex;
     align-items: center;
-    gap: 5px;           /* space between icon and text */
-    padding: 10px 20px; /* same for all buttons */
+    gap: 5px;          
+    padding: 10px 20px; 
     background-color: #b1cbbb;
     color: #222;
     border: none;
@@ -489,9 +422,9 @@ body:not(:has(:target)) #experience {
 }
 
 .contact-buttons .button-icon {
-    width: 32px;       /* uniform width for all SVGs */
-    height: 32px;      /* uniform height */
-    object-fit: contain; /* preserve aspect ratio */
+    width: 32px;       
+    height: 32px;     
+    object-fit: contain; 
     display: inline-block;
 }
 
@@ -501,7 +434,8 @@ body:not(:has(:target)) #experience {
     color: white;
     transform: translateY(-2px);
 }
-/* Caption under image */
+
+/* --CAPTION UNDER IMAGE-- */
 .portrait-caption {
     margin-top: 12px;
     font-size: 17px;
@@ -509,28 +443,29 @@ body:not(:has(:target)) #experience {
     position: center; 
 }
 
+/*--------------MAP--------------- */
 .map-container {
     width: 100%;
-    max-width: 900px; /* optional: limit width */
-    margin: 0 auto;   /* center horizontally */
-    border-radius: 20px; /* optional: rounded edges */
-    overflow: hidden; /* ensures glow doesn't get clipped */
+    max-width: 900px; 
+    margin: 0 auto;  
+    border-radius: 20px; 
+    overflow: hidden; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* subtle base shadow */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .map-container iframe {
     width: 100%;
-    height: 350px; /* slightly less tall, adjust as needed */
+    height: 350px;
     border: 0;
     display: block;
 }
 
-/* Hover effect */
+/* --ANIMATION: HOVER EFFECT-- */
 .map-container:hover {
-    transform: scale(1.02); /* subtle zoom */
-    box-shadow: 0 0 25px rgba(255, 105, 180, 0.6), /* pink glow */
-                0 0 35px rgba(0, 255, 150, 0.4);    /* green glow */
+    transform: scale(1.02); 
+    box-shadow: 0 0 25px rgba(255, 105, 180, 0.6), 
+                0 0 35px rgba(0, 255, 150, 0.4);    
 }
 
 .tooltip, 
@@ -539,33 +474,33 @@ body:not(:has(:target)) #experience {
     font-weight: normal !important;
 }
 
+/* --STYLED LINKS-- */
 .ns-links {
     text-align: center;
-    margin-top: 30px; /* increase this number to add more space */
-    margin-bottom: 20px; /* optional: space below links */
+    margin-top: 30px; 
+    margin-bottom: 20px; 
 }
 
-/* Style gallery like footer links */
 .ns-links {
     text-align: center;
-    margin-top: 30px; /* spacing above links */
-    margin-bottom: 20px; /* spacing below links */
+    margin-top: 30px; 
+    margin-bottom: 20px; 
 }
 
 .ns-links a {
-    color: #c94c4c;  /* same pink/red accent as footer */
+    color: #c94c4c;  
     text-decoration: none;
     font-weight: bold;
     margin: 0 5px;
-    position: relative; /* needed for tooltip */
+    position: relative; 
     transition: color 0.3s ease;
 }
 
 .ns-links a:hover {
-    color: #eea29a; /* lighter pink on hover */
+    color: #eea29a; 
 }
 
-/* Tooltip for NS links */
+/* --TOOLTIPS FOR NS LINKS-- */
 .ns-links a.tooltip::after {
     content: attr(data-tooltip);
     position: absolute;
@@ -618,64 +553,52 @@ body:not(:has(:target)) #experience {
 }
 
 .ns-links a:visited {
-    color: #6bafaf;  /* same as footer visited color */
+    color: #6bafaf;  
 }
 
-/* Make links stack on mobile */
-@media (max-width: 480px) {
-    .ns-links a {
-        display: block;
-        margin: 5px 0;
-    }
-    .ns-links a.tooltip::after {
-        white-space: normal;
-        max-width: 200px;
-    }
-}
-
-/* Portrait container */
+/* --PORTRAIT CONTAINER-- */
 .portrait-container {
     text-align: center;
-    margin: 40px 0; /* spacing around the portrait section */
+    margin: 40px 0; 
 }
 
-/* Horizontal oval portrait with neon glow */
+/* --HORIZONTAL OVAL PORTRAIT WITH NEON GLOW-- */
 .portrait-container img {
     width: 100%;
-    max-width: 300px;       /* responsive size */
+    max-width: 300px;     
     height: auto;
-    border-radius: 50% / 50%; /* full horizontal oval */
+    border-radius: 50% / 50%; 
     box-shadow: 
-        0 0 15px #8B008B,  /* dark pink glow */
-        0 0 30px #006400;  /* dark green glow */
+        0 0 15px #8B008B,  
+        0 0 30px #006400; 
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     cursor: pointer;
 }
 
-/* Center everything */
+/* --CENTERED STYLING-- */
 .portrait-section {
     text-align: center;
     margin: 40px 0;
 }
 
-/* Hide the checkbox */
+/* --MAKE PORTRAIT TO CARTOON TOGGLE INVISIBLE AKA NO CHECKBOX-- */
 #toggle-portrait {
     display: none;
 }
 
-/* Wrapper containing both images */
+/* --WRAPPER CONTAINING BOTH IMAGES-- */
 .portrait-wrapper {
     display: inline-block;
     position: relative;
     cursor: pointer;
 }
 
-/* Base portrait styling */
+/* --BASE PORTRAIT STYLING-- */
 .portrait {
-    width: min(80vw, 350px);  /* responsive: up to 350px max */
-    aspect-ratio: 4 / 3;      /* horizontal oval */
+    width: min(80vw, 350px);  
+    aspect-ratio: 4 / 3;      
     object-fit: cover;
-    border-radius: 50% / 50%; /* horizontal oval shape */
+    border-radius: 50% / 50%; 
     position: absolute;
     left: 0;
     top: 0;
@@ -685,7 +608,7 @@ body:not(:has(:target)) #experience {
         filter 0.3s ease;
 }
 
-/* Glow on hover (animated neon) */
+/* --ANIMATION: GLOW ON HOVER-- */
 .portrait-wrapper:hover .portrait {
     transform: scale(1.03);
     animation: neonPulse 2s infinite alternate ease-in-out;
@@ -693,26 +616,26 @@ body:not(:has(:target)) #experience {
 
 #portrait {
     width: 100%;
-    max-width: 300px;       /* responsive */
-    aspect-ratio: 2/1;      /* horizontal oval */
-    border-radius: 50% / 50%; /* keeps horizontal oval */
+    max-width: 300px;      
+    aspect-ratio: 2/1;     
+    border-radius: 50% / 50%; 
     cursor: pointer;
     transition: transform 0.3s ease;
     box-shadow:
-        0 0 10px rgba(139, 0, 139, 0.6),   /* dark pink glow */
+        0 0 10px rgba(139, 0, 139, 0.6),  
         0 0 20px rgba(139, 0, 139, 0.5),
         0 0 30px rgba(139, 0, 139, 0.4);
 }
 
-/* Neon animation keyframes */
+/* --ANIMATION: NEON PULSE-- */
 @keyframes neonPulse {
     0% {
-        filter: drop-shadow(0 0 6px rgba(139, 0, 139, 0.4))   /* dark pink */
-                drop-shadow(0 0 12px rgba(0, 100, 0, 0.5));  /* dark green */
+        filter: drop-shadow(0 0 6px rgba(139, 0, 139, 0.4))   
+                drop-shadow(0 0 12px rgba(0, 100, 0, 0.5)); 
     }
     100% {
-        filter: drop-shadow(0 0 12px rgba(255, 20, 147, 0.8)) /* brighter pink */
-                drop-shadow(0 0 24px rgba(50, 205, 50, 0.9)); /* brighter green */
+        filter: drop-shadow(0 0 12px rgba(255, 20, 147, 0.8)) 
+                drop-shadow(0 0 24px rgba(50, 205, 50, 0.9)); 
     }
 }
 
@@ -721,7 +644,7 @@ body:not(:has(:target)) #experience {
     transform: scale(1.05);
 }
 
-/* Default visibility */
+/* --DEFAULT VISIBILITY-- */
 .normal-img {
     opacity: 1;
     position: relative;
@@ -731,7 +654,7 @@ body:not(:has(:target)) #experience {
     opacity: 0;
 }
 
-/* Toggle effect — when checked, swap images */
+/* --PORTRAIT TO CARTOON TOGGLE-- */
 #toggle-portrait:checked + .portrait-wrapper .normal-img {
     opacity: 0;
 }
@@ -740,7 +663,7 @@ body:not(:has(:target)) #experience {
     opacity: 1;
 }
 
-/* ===== Footer ===== */
+/* -----------FOOTER----------- */
 footer {
     background-color: transparent;
     color: #222;
@@ -776,18 +699,13 @@ footer {
     cursor: default;
 }
 
-.footer-links .divider {
-    display: inline-flex;
-    color: #555;
-}
-
 .tooltip:hover {
     color: #eea29a;
 }
 
 .tooltip {
     position: relative;
-    overflow: visible; /* default, but ensures the tooltip isn't clipped */
+    overflow: visible;
 }
 
 .tooltip::after {
@@ -804,7 +722,6 @@ footer {
     white-space: normal; 
     max-width: 320px;
     width: max-content;
-    /* font-size: 0.75rem; */
     font-size: 1rem;
     opacity: 0;
     pointer-events: none;
@@ -830,31 +747,34 @@ footer {
     opacity: 1;
 }
 
-/* Visited state for reference links */
+/* --VISITED STYLE FOR REFERENCE LINKS-- */
 .footer-links a.visited-link {
     color: #6bafaf;
 }
 
-/* Style for the dynamic copyright */
+/* --DYNAMIC COPYRIGHT STYLE-- */
 footer .copyright {
-    font-size: 1rem;   /* matches other footer text */
-    color: #333;         /* same as other footer text */
-    margin-top: 8px;    /* spacing from above links */
+    font-size: 1rem;  
+    color: #333;         
+    margin-top: 8px;    
     display: block;
     text-align: center;
     line-height: 1.5;
 }
 
-/* Responsive */
+/* -------------RESPONSITIVITY-------------- */
+
+/*--TABLET/SCREENS UP TO 768px--*/
 @media (max-width: 768px) {
-    #desktopMenu {
-        display: none;
-    }
-    .navbar {
-        display: flex;
-    }
+    #desktopMenu { display: none; }
+    .navbar { display: flex; }
+    .experience-grid { grid-template-columns: 1fr; gap: 30px; }
+    .skills { order: 1; }
+    .certificates { order: 2; }
+    .photography { order: 3; }
 }
 
+/*--MOBILE SCREEN UP TO 480px--*/
 @media (max-width: 480px) {
     .footer-links {
         display: flex;
@@ -864,28 +784,24 @@ footer .copyright {
         justify-content: center;
         align-items: center;
     }
-    .tooltip::after {
-        white-space: normal;
-        max-width: 200px;
-    }
+    .tooltip::after { white-space: normal; max-width: 200px; }
+    .tooltip-block { width: 95%; font-size: 0.8rem; }
+
+    /* --MAKE LINKS STACK VERTICALLY ON MOBILE-- */
+    .ns-links a { display: block; margin: 5px 0; }
+    .ns-links a.tooltip::after { white-space: normal; max-width: 200px; }
 }
 
+/*--TABLET SCREEN 769px-992px--*/
 @media (max-width: 992px) and (min-width: 769px) {
     .experience-grid {
         display: grid;
-        grid-template-columns: 1fr; /* single column stack */
-        gap: 10px;                  /* adjust spacing between items */
+        grid-template-columns: 1fr; 
+        gap: 10px;                  
     }
 
-    .skills {
-        grid-row: 1;
-    }
-
-    .certificates {
-        grid-row: 2; /* directly under skills */
-    }
-
-    .photography {
-        grid-row: 3; /* below awards on tablets */
-    }
+    .skills { grid-row: 1; }
+    .certificates { grid-row: 2; }
+    .photography { grid-row: 3; }
 }
+
