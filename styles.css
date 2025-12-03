@@ -186,6 +186,13 @@ main {
     margin-bottom: 10px;
 }
 
+.intro-line {
+    font-size: 1.5rem;  /* adjust this number to make it bigger or smaller */
+    line-height: 1.4;   /* optional: improves readability */
+    color: #222;        /* matches your text color */
+    text-align: center;
+}
+
 /* Experience section 3-column layout */
 .experience-grid {
     display: grid;
@@ -211,6 +218,13 @@ main {
 
 .experience-column img:hover {
     transform: scale(1.05);
+}
+
+.experience-column p:first-child {
+    font-size: 1.6rem;  /* adjust size */
+    font-weight: bold;  /* makes it stand out */
+    margin-bottom: 10px; /* spacing below heading */
+    color: #222;
 }
 
 /* Responsive: stack on smaller screens */
