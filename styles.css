@@ -496,6 +496,12 @@ body:not(:has(:target)) #experience {
     z-index: 10;
 }
 
+.ns-links a.tooltip {
+    display: inline-block;
+    position: relative;
+    overflow: visible;
+}
+
 .ns-links a.tooltip::before {
     content: "";
     position: absolute;
@@ -507,6 +513,15 @@ body:not(:has(:target)) #experience {
     border-color: #333 transparent transparent transparent;
     opacity: 0;
     transition: opacity 0.3s ease;
+}
+
+.ns-links a.tooltip::after {
+    display: block;
+}
+
+.ns-links a.tooltip::after {
+    white-space: normal;
+    max-width: 300px;
 }
 
 .ns-links a.tooltip:hover::after,
