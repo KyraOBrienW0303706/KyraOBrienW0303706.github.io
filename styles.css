@@ -776,6 +776,11 @@ footer {
     cursor: default;
 }
 
+.footer-links .divider {
+    display: inline-flex;
+    color: #555;
+}
+
 .tooltip:hover {
     color: #eea29a;
 }
