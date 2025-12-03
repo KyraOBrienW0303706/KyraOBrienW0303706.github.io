@@ -42,13 +42,13 @@ main {
 }
 
 #hero h1 {
-    font-size: 3.5em;
+    font-size: 3.2em;
     margin-bottom: 15px;
     animation: shadowMove 5s ease-in-out infinite alternate;  
 }
 
 #hero p {
-    font-size: 1.6em;
+    font-size: 1.5em;
     margin-bottom: 20px;
 }
 
@@ -70,6 +70,7 @@ main {
 }
 
 #desktopMenu a {
+    font-size: 1.2rem;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -118,6 +119,7 @@ main {
 }
 
 #mobileMenu a {
+    font-size: 1.2rem;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -140,7 +142,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     text-align: center;
     width: 80px; /* optional: keeps items aligned */
 }
@@ -164,7 +166,8 @@ main {
 .skill-item span {
     display: block;
     text-align: center;
-    font-size: 0.85rem;
+    /* font-size: 0.85rem; */
+    font-size: 1rem;
     color: #222;
 }
 
@@ -275,7 +278,8 @@ main {
 }
 
 .award-text {
-    font-size: 0.9rem;
+    /* font-size: 0.9rem; */
+    font-size: 1.2rem;
     color: #222;
     line-height: 1.4;
     text-align: center;
@@ -369,7 +373,7 @@ main {
 .card h3 {
     margin-top: 0;
     margin-bottom: 15px;
-    font-size: 1.5em;
+    font-size: 2.6em;
     color: #c94c4c; /* accent pink/red heading */
 }
 
@@ -419,6 +423,20 @@ main {
 /* Show hero section only when no tab is selected */
 body:not(:has(:target)) #experience {
     display: block;
+}
+
+/* Contact Section Text Sizes */
+#contact h2 {
+    font-size: 2rem;       /* change this */
+}
+
+#contact p {
+    font-size: 1.2rem; 
+    text-align: center;    /* this controls the fair traveler paragraph */
+}
+
+#contact h2 {
+    margin-bottom: 0.1rem;   /* reduce spacing between header and paragraph */
 }
 
 /* ===== Contact buttons styling ===== */
@@ -501,6 +519,12 @@ body:not(:has(:target)) #experience {
                 0 0 35px rgba(0, 255, 150, 0.4);    /* green glow */
 }
 
+.tooltip, 
+.tooltip *, 
+.tooltiptext {
+    font-weight: normal !important;
+}
+
 .ns-links {
     text-align: center;
     margin-top: 30px; /* increase this number to add more space */
@@ -539,7 +563,7 @@ body:not(:has(:target)) #experience {
     padding: 6px 12px;
     border-radius: 5px;
     white-space: nowrap;
-    font-size: 0.75rem;
+    font-size: 1rem;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
@@ -706,9 +730,9 @@ body:not(:has(:target)) #experience {
 footer {
     background-color: transparent;
     color: #222;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.5;
 }
 
@@ -761,7 +785,8 @@ footer {
     white-space: normal; 
     max-width: 320px;
     width: max-content;
-    font-size: 0.75rem;
+    /* font-size: 0.75rem; */
+    font-size: 1rem;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
@@ -793,9 +818,9 @@ footer {
 
 /* Style for the dynamic copyright */
 footer .copyright {
-    font-size: 0.9rem;   /* matches other footer text */
+    font-size: 1rem;   /* matches other footer text */
     color: #333;         /* same as other footer text */
-    margin-top: 10px;    /* spacing from above links */
+    margin-top: 8px;    /* spacing from above links */
     display: block;
     text-align: center;
     line-height: 1.5;
